@@ -1454,6 +1454,12 @@ public class MediaPlayer
 	public static final int KEY_PARAMETER_AML_PLAYER_TRICKPLAY_BACKWARD=2006;//string,refer to  backward:speed
 	public static final int KEY_PARAMETER_AML_PLAYER_FORCE_HARD_DECODE=2007;//string,refer to mp3,etc.
 	public static final int KEY_PARAMETER_AML_PLAYER_FORCE_SOFT_DECODE=2008;//string,refer to mp3,etc.	
+
+	/**
+	 * screen_mode, see kernel video drvier screen_mode.
+	 * @hide
+	 */
+	public static final int KEY_PARAMETER_AML_PLAYER_SCREEN_MODE=2009;
 	
 	public static final int VIDEO_OUT_SOFT_RENDER =	0;
 	public static final int VIDEO_OUT_HARDWARE	=	1;
