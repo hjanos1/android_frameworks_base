@@ -1033,6 +1033,7 @@ public class WifiService extends IWifiManager.Stub {
                 }
                 mAlarmManager.cancel(mIdleIntent);
 		mWifiStateMachine.releaseShutdownLock();
+		mWifiStateMachine.releaseSodLock();
                 mScreenOff = false;
                 evaluateTrafficStatsPolling();
                 setDeviceIdleAndUpdateWifi(false);
