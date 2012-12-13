@@ -1394,6 +1394,12 @@ public class WifiStateMachine extends StateMachine {
     private void setCountryCode() {
         String countryCode = Settings.Global.getString(mContext.getContentResolver(),
                 Settings.Global.WIFI_COUNTRY_CODE);
+	if (countryCode == null) {
+	    countryCode = "JP";
+	    Settings.Global.putString(mContext.getContentResolver(),
+		    Settings.Global.WIFI_COUNTRY_CODE,
+		    countryCode);
+	}
         if (countryCode != null && !countryCode.isEmpty()) {
             setCountryCode(countryCode, false);
         } else {
